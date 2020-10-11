@@ -22,16 +22,17 @@ class Game extends React.Component {
     this.setCurrentTime()
   }
   
-  setCurrentTime = () => {
+ setCurrentTime = () => {
     this.setState({ time: new Date(Date.now())});
   }
-
-  addPancake = () => {
+  
+ addPancake = () => {
     this.setState({
       pancakes: this.state.pancakes.concat(Date.now())
     });
   }
-
+  
+  
   takeItOff = (id, status) => {
     const { pancakes, cooked, burnt, raw } = this.state;
 
